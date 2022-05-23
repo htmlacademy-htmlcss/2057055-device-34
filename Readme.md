@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Дмитрий Ткаличев](https://up.htmlacademy.ru/htmlcss/34/user/2057055).
-* Наставник: `Ирина Малиновская`.
+* Наставник: [Ирина Малиновская](https://htmlacademy.ru/profile/irina-malinovskaya).
 
 ---
 
