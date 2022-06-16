@@ -10,7 +10,7 @@
 <body>
   <header class="page-header">
     <div class="page-header-container">
-      <h1 class="visually-hidden" hidden>Интернет-магазин «Девайс»</h1>
+      <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
       <a class="logo-link" href="#"><img class="logo-header" src="images/logo.svg" width="145" height="36"
           alt="Логотип интернет-магазина «Девайс»"></a>
       <nav class="navigation">
@@ -22,13 +22,13 @@
             </form>
           </li>
           <li class="navigation-item navigation-item-login">
-            <a class="navigation-link" href="#">Войти</a>
+            <a class="navigation-link navigation-link-user" href="#">Войти</a>
           </li>
           <li class="navigation-item navigation-item-compare">
-            <a class="navigation-link" href="#">Сравнить</a>
+            <a class="navigation-link navigation-link-compare" href="#">Сравнить</a>
           </li>
           <li class="navigation-item navigation-item-basket">
-            <a class="navigation-link" href="#">Корзина</a>
+            <a class="navigation-link navigation-link-basket" href="#">Корзина</a>
           </li>
         </ul>
 
@@ -42,7 +42,7 @@
               <a class="menu-link" href="#">Гарантия</a>
             </li>
             <li class="menu-item menu-item-catalog">
-              <a class="menu-link" href="#">Контакты</a>
+              <a class="menu-link menu-link-contacts" href="#">Контакты</a>
             </li>
           </ul>
         </div>
@@ -53,14 +53,12 @@
   <main class="main-container main-index">
     <div class="page-container">
       <section class="slider">
-        <h2 class="visually-hidden" hidden>Слайдер</h2>
+        <h2 class="visually-hidden">Слайдер</h2>
         <div class="slider-item">
           <h3 class="slider-item-number">01</h3>
           <div class="slider-item-content">
             <div class="slider-item-image">
-              <a href="#" class="slider-arrow"></a>
               <img class="slider-image" src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер">
-              <a href="#" class="slider-arrow"></a>
             </div>
             <div class="slider-item-description">
               <b class="slider-item-slogan title">Порхает как бабочка, жалит как пчела!</b>
@@ -80,16 +78,14 @@
           <h3 class="slider-item-number">02</h3>
           <div class="slider-item-content">
             <div class="slider-item-image">
-              <a href="#" class="slider-arrow"></a>
               <img class="slider-image" src="images/slider-2.png" width="560" height="560" alt="Фитнес-браслет">
-              <a href="#" class="slider-arrow"></a>
             </div>
             <div class="slider-item-description">
               <b class="slider-item-slogan title">Худеем правильно!</b>
               <p class="slider-item-info info-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
                 занятия и
                 соблюдать диету.</p>
-              <a class="slider-item-more" href="#">Подробнее</a>
+              <a class="slider-item-more info-link" href="#">Подробнее</a>
               <dl class="slider-item-description-list">
                 <dt class="slider-item-option">Без подзарядки</dt>
                 <dd class="slider-item-option-value">48 часов</dd>
@@ -101,9 +97,7 @@
           <h3 class="slider-item-number">03</h3>
           <div class="slider-item-content">
             <div class="slider-item-image">
-              <a href="#" class="slider-arrow"></a>
               <img class="slider-image" src="images/slider-3.png" width="560" height="560" alt="Селфи-палка">
-              <a href="#" class="slider-arrow"></a>
             </div>
             <div class="slider-item-description">
               <b class="slider-item-slogan title">Делай селфи, как Бен Стиллер! </b>
@@ -111,7 +105,7 @@
                 (Восемь,
                 Карл!)
                 метров длиной и весом всего 5 кг.</p>
-              <a class="slider-item-more" href="#">Подробнее</a>
+              <a class="slider-item-more  info-link" href="#">Подробнее</a>
               <dl class="slider-item-description-list">
                 <dt class="slider-item-option">Длина палки</dt>
                 <dd class="slider-item-option-value">8,5 м</dd>
@@ -126,35 +120,41 @@
       </section>
 
       <section class="categories">
-        <h2 class="visually-hidden" hidden>Категории товаров</h2>
+        <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="categories-list">
           <li class="categories-item">
             <a class="categories-item-link" href="#">
+              <div class="categories-item-image categories-item-image-vr"></div>
               <p class="categories-item-name">Виртуальная реальность</p>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-item-link" href="#">
+              <div class="categories-item-image categories-item-image-selfie"></div>
               <p class="categories-item-name">Моноподы для селфи</p>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-item-link" href="#">
+              <div class="categories-item-image categories-item-image-camera"></div>
               <p class="categories-item-name">Экшн-камеры</p>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-item-link" href="#">
+              <div class="categories-item-image categories-item-image-fitness"></div>
               <p class="categories-item-name">Фитнес-браслеты</p>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-item-link" href="#">
+              <div class="categories-item-image categories-item-image-watch"></div>
               <p class="categories-item-name">Умные часы</p>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-item-link" href="#">
+              <div class="categories-item-image categories-item-image-copter"></div>
               <p class="categories-item-name">Квадрокоптеры</p>
             </a>
           </li>
@@ -163,7 +163,7 @@
     </div>
 
     <section class="services">
-      <h2 class="visually-hidden" hidden>Услуги</h2>
+      <h2 class="visually-hidden">Услуги</h2>
       <div class="services-container">
         <div class="services-tabs">
           <a href="#" class="delivery-link info-link services-tab">Доставка</a>
@@ -202,12 +202,16 @@
 
     <section class="delivery-on-order">
       <a class="delivery-on-order-link" href="#">
+        <div class="delivery-on-order-link-image"></div>
         <p class="delivery-on-order-info">Доставим редкий товар под заказ</p>
+        <div class="delivery-on-order-link-info">
+          <div class="delivery-on-order-link-info-image"></div>
+        </div>
       </a>
     </section>
 
     <section class="main-info page-container">
-      <h2 class="visually-hidden" hidden>Информация о магазине</h2>
+      <h2 class="visually-hidden">Информация о магазине</h2>
       <div class="index-columns">
         <div class="about-us">
           <h3 class="about-us-title title">О нас</h3>
@@ -246,7 +250,7 @@
     <section class="newsletter ">
       <div class="page-container">
         <div class="newsletter-text">
-          <h2 class="visually-hidden" hidden>Подписка на рассылку</h2>
+          <h2 class="visually-hidden">Подписка на рассылку</h2>
           <b class="newsletter-slogan title">Подпишитесь на рассылку</b>
           <p class="newsletter-info info-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами,
             распаковками, а
@@ -266,7 +270,7 @@
 
   <footer class="page-footer">
     <div class="page-container footer-container">
-      <a class="logo-link" href="#"><img class="logo-footer" src="images/logo.svg" width="145" height="36"
+      <a class="logo-link logo-link-footer" href="#"><img class="logo-footer" src="images/logo.svg" width="145" height="36"
           alt="Логотип интернет-магазина «Девайс»"></a>
       <div class="footer-info">
         <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
