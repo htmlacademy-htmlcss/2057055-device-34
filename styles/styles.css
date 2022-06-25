@@ -695,13 +695,18 @@ body {
 
 .products {
   background: #FFFFFF;
+  padding-top: 30px;
   padding-bottom: 78px;
 }
 
 .product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 40PX;
+  gap: 40px;
+  margin-bottom: 4px;
 }
 
 .product-card-link {
@@ -709,16 +714,23 @@ body {
   color: inherit;
 }
 
+.product-card-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
 .product-card-title {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 200px;
 }
 
 .product-card-price {
   font-weight: 400;
   line-height: 21px;
-  text-align: right;
   color: #444444;
 }
 
@@ -739,8 +751,6 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 16px 25px;
-
 }
 
 .pagination-list {
@@ -748,6 +758,7 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  align-items: center;
 }
 
 .pagination-control {
@@ -758,6 +769,7 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: inherit;
+  padding: 25px;
 }
 
 .pagination-item {
