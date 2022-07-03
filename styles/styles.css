@@ -166,21 +166,34 @@ body {
   left: 0;
 }
 
-.navigation-link:hover {
+.link:hover {
   opacity: 0.6;
 }
 
-.navigation-link:active {
+.link:active {
   opacity: 0.3;
 }
 
-.navigation-link:focus {
+.link:focus {
   outline: 2px solid #AF4FFF;
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.menu-link {
+  display: block;
+  padding: 2px 0;
+  font-family: "Raleway", sans-serif;
+  line-height: 21px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .menu-list {
@@ -195,13 +208,31 @@ body {
   margin-right: -0.2em;
 }
 
-.menu-link {
-  display: block;
-  padding: 2px 0;
-}
-
 .menu-link-catalog {
   width: 293px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-link-catalog-plus {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background-image: url(../images/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+}
+
+.menu-link-catalog:hover .menu-link-catalog-plus,
+.menu-link-catalog:active .menu-link-catalog-plus {
+  opacity: 1;
+}
+
+.menu-link-catalog:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .menu-list {
@@ -209,16 +240,6 @@ body {
   padding: 0;
   list-style-type: none;
   margin-left: auto;
-}
-
-.menu-link {
-  font-family: "Raleway", sans-serif;
-  line-height: 21px;
-  text-decoration: none;
-  color: inherit;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
 }
 
 .main-container {
@@ -280,6 +301,8 @@ body {
 }
 
 .info-link {
+  position: relative;
+  z-index: 1;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -288,7 +311,36 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.info-link:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  width: inherit;
+  height: 8px;
+  margin-top: -5px;
   background-color: #FFE17F;
+}
+
+.info-link:hover::before {
+  top: 0;
+  height: 40px;
+  margin: 0;
+  transition: all 0.3s linear;
+}
+
+.info-link:active::before {
+  background-color: #FFCC33;
+}
+
+.info-link:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .slider-item-option {
@@ -300,10 +352,6 @@ body {
   font-size: 36px;
 }
 
-.categories {
-  margin-bottom: 70px;
-}
-
 .categories-list {
   display: flex;
   justify-content: space-between;
@@ -312,17 +360,15 @@ body {
   padding: 0;
 }
 
-.categories-item {
-  width: 160px;
-}
-
 .categories-item-link {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   line-height: 24px;
   letter-spacing: -0.02em;
+  width: 160px;
 }
 
 .categories-item-image {
@@ -330,6 +376,18 @@ body {
   background-color: #FFE17F;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.categories-item-link:active {
+  opacity: 0.3;
+}
+
+.categories-item-link:hover .categories-item-image {
+  background-color: #FFC700;
+}
+
+.categories-item-link:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .categories-item-image-vr {
@@ -365,8 +423,19 @@ body {
 }
 
 .services {
-  background: #F0F0F0;
   margin-bottom: 70px;
+  position: relative;
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  top: 163px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: calc(100% - 164px);
+  background-color: #F0F0F0;
 }
 
 .services-container {
@@ -378,43 +447,74 @@ body {
 .services-tabs {
   display: flex;
   flex-direction: column;
-  width: 280px;
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding-top: 123px;
+  padding-right: 120px;
+  position: relative;
+}
+
+.services-tabs::before {
+  content: "";
+  position: absolute;
+  top: 63px;
+  right: -7px;
+  width: 7px;
+  height: 319px;
+  background-color: #000000;
 }
 
 .services-tab {
-  width: 153px;
+  width: 160px;
   margin-bottom: 35px;
 }
 
 .services-item {
-  height: 391px;
-  width: 880px;
+  width: 460px;
+  margin-left: 120px;
+  padding-top: 135px;
+  position: relative;
+}
+
+.services-item-delivery::before {
+  position: absolute;
+  content: "";
+  right: -246px;
+  z-index: 0;
+  width: 136px;
+  height: 164px;
+
+  background-image: url("../images/delivery.svg");
+  background-repeat: no-repeat;
+}
+
+.services-item-warranty::before {
+  position: absolute;
+  content: "";
+  right: -248px;
+  z-index: 0;
+  width: 171px;
+  height: 195px;
+  background-image: url("../images/warranty.svg");
+  background-repeat: no-repeat;
+}
+
+.services-item-credit::before {
+  position: absolute;
+  content: "";
+  right: -249px;
+  z-index: 0;
+  width: 156px;
+  height: 188px;
+  background-image: url("../images/credit.svg");
+  background-repeat: no-repeat;
 }
 
 .services-item-title {
-  margin-top: 73px;
   margin-bottom: 34px;
 }
 
 .services-item-info {
   width: 480px;
-}
-
-.services-item-delivery {
-  background: url(../images/delivery.svg) no-repeat;
-  background-position: bottom 150px right 66px;
-}
-
-.services-item-warranty {
-  background: url(../images/warranty.svg) no-repeat;
-  background-position: bottom 134px right 28px;
-}
-
-.services-item-credit {
-  background: url(../images/credit.svg) no-repeat;
-  background-position: bottom 146px right 34px;
+  margin: 0;
 }
 
 .delivery-on-order {
@@ -436,6 +536,7 @@ body {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .delivery-on-order-link-image {
@@ -462,9 +563,29 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-image: url(../images/info.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-image {
+  opacity: 0.3;
+}
+
+.delivery-on-order-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.delivery-on-order-link:hover .delivery-on-order-link-image {
+  background-color: #FFC700;
+}
+
+.delivery-on-order-link:hover .info-image {
+  opacity: 1;
+}
+
+.delivery-on-order-link:active {
+  opacity: 0.3;
 }
 
 .main-info {
@@ -507,6 +628,12 @@ body {
   margin-bottom: 19px;
 }
 
+.about-us-link {
+  display: inline-block;
+  width: 270px;
+  text-align: center;
+}
+
 .contacts {
   width: 532px;
 }
@@ -547,6 +674,12 @@ body {
   margin-top: 0;
   margin-bottom: 40px;
   padding: 0;
+}
+
+.contacts-link {
+  display: inline-block;
+  width: 259px;
+  text-align: center;
 }
 
 .newsletter {

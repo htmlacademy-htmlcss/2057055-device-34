@@ -29,27 +29,27 @@
               </form>
             </li>
             <li class="navigation-item navigation-item-login">
-              <a class="navigation-link navigation-link-user" href="#">Войти</a>
+              <a class="navigation-link navigation-link-user link" href="#">Войти</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-compare" href="#">Сравнить</a>
+              <a class="navigation-link navigation-link-compare link" href="#">Сравнить</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-basket" href="#">Корзина</a>
+              <a class="navigation-link navigation-link-basket link" href="#">Корзина</a>
             </li>
           </ul>
 
           <div class="menu">
-            <a class="menu-link menu-link-catalog" href="catalog.html">Каталог товаров</a>
+            <a class="menu-link menu-link-catalog" href="catalog.html">Каталог товаров <div class="menu-link-catalog-plus"></div></a>
             <ul class="menu-list">
               <li class="menu-item menu-item-catalog">
-                <a class="menu-link" href="#">Доставка</a>
+                <a class="menu-link link" href="#">Доставка</a>
               </li>
               <li class="menu-item menu-item-catalog">
-                <a class="menu-link" href="#">Гарантия</a>
+                <a class="menu-link link" href="#">Гарантия</a>
               </li>
               <li class="menu-item menu-item-catalog">
-                <a class="menu-link menu-link-contacts" href="#">Контакты</a>
+                <a class="menu-link menu-link-contacts link" href="#">Контакты</a>
               </li>
             </ul>
           </div>
@@ -131,37 +131,37 @@
         <section class="categories">
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="categories-list">
-            <li class="categories-item">
+            <li>
               <a class="categories-item-link" href="#">
                 <div class="categories-item-image categories-item-image-vr"></div>
                 <p class="categories-item-name">Виртуальная реальность</p>
               </a>
             </li>
-            <li class="categories-item">
+            <li>
               <a class="categories-item-link" href="#">
                 <div class="categories-item-image categories-item-image-selfie"></div>
                 <p class="categories-item-name">Моноподы для селфи</p>
               </a>
             </li>
-            <li class="categories-item">
+            <li>
               <a class="categories-item-link" href="#">
                 <div class="categories-item-image categories-item-image-camera"></div>
                 <p class="categories-item-name">Экшн-камеры</p>
               </a>
             </li>
-            <li class="categories-item">
+            <li>
               <a class="categories-item-link" href="#">
                 <div class="categories-item-image categories-item-image-fitness"></div>
                 <p class="categories-item-name">Фитнес-браслеты</p>
               </a>
             </li>
-            <li class="categories-item">
+            <li>
               <a class="categories-item-link" href="#">
                 <div class="categories-item-image categories-item-image-watch"></div>
                 <p class="categories-item-name">Умные часы</p>
               </a>
             </li>
-            <li class="categories-item">
+            <li>
               <a class="categories-item-link" href="#">
                 <div class="categories-item-image categories-item-image-copter"></div>
                 <p class="categories-item-name">Квадрокоптеры</p>
@@ -214,7 +214,12 @@
           <div class="delivery-on-order-link-image"></div>
           <p class="delivery-on-order-info">Доставим редкий товар под заказ</p>
           <div class="delivery-on-order-link-info">
-            <div class="delivery-on-order-link-info-image"></div>
+            <div class="delivery-on-order-link-info-image">
+              <svg class="info-image" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 0H0V2H2V0Z" fill="black"/>
+                <path d="M2 4H0V12H2V4Z" fill="black"/>
+                </svg>
+            </div>
           </div>
         </a>
       </section>
@@ -273,7 +278,7 @@
             <button class="newsletter-button" type="submit">
               <span class="newsletter-button-text">Подписаться</span>
             </button>
-            <label for="newsletter-email info-text">Это бесплатно</label>
+            <label for="newsletter-email" class="info-text">Это бесплатно</label>
           </form>
         </div>
       </section>
