@@ -23,8 +23,9 @@
           <ul class="navigation-list search-list">
             <li class="navigation-item navigation-item-search">
               <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="navigation-search-label" for="search"><span class="visually-hidden">Поиск:</span></label>
                 <input class="navigation-search-input" id="search" name="search" type="search"
-                  placeholder="Текст поиска">
+                  placeholder="Поиск по сайту">
                 <button class="navigation-search-button">Найти</button>
               </form>
             </li>
@@ -34,8 +35,31 @@
             <li class="navigation-item">
               <a class="navigation-link navigation-link-compare link" href="#">Сравнить</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-item-cart">
               <a class="navigation-link navigation-link-basket link" href="#">Корзина</a>
+              <div class="popover popover-cart">
+                <ul class="cart-items-list">
+                  <li class="cart-item">
+                    <img src="images/amateur-selfie-stick-small.png" alt="" class="cart-item-image" width="39" height="43">
+                    <span class="cart-item-text">Любительская селфи-палка</span>
+                  </li>
+                  <li class="cart-item">
+                    <img src="images/prof-selfie-stick-small.png" alt="" class="cart-item-image" width="39" height="43">
+                    <span class="cart-item-text">Профессиональная селфи-палка</span>
+                  </li>
+                </ul>
+                <ul class="cart-items-summ">
+                  <li class="summ-item">
+                    <b class="items-summary">Товаров:</b>
+                    <b class="items-summary-number">2</b>
+                  </li>
+                  <li class="summ-item">
+                    <b class="items-summary">Сумма:</b>
+                    <b class="items-summary-number items-summary-price">2000 ₽</b>
+                  </li>
+                </ul>
+                <button class="popover-cart-button">Открыть корзину</button>
+              </div>
             </li>
           </ul>
 
@@ -324,12 +348,14 @@
               распаковками, а
               также акции, спецпредложения и вот это вот всё.</p>
           </div>
-          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email"
-              required>
-            <button class="newsletter-button" type="submit">Подписаться</button>
-            <label for="newsletter-email" class="info-text">Это бесплатно</label>
-          </form>
+          <div class="newsletter-subscription">
+            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+              <input class="newsletter-field" placeholder="Ваш e-mail" type="email" name="newsletter-email"
+                id="newsletter-email" required>
+              <button class="newsletter-button" type="submit">Подписаться</button>
+            </form>
+            <span class="info-text subscription-text">Это бесплатно</span>
+          </div>
         </div>
       </section>
     </main>
