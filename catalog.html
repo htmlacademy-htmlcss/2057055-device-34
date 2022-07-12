@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.ico"> <!-- 32×32 -->
   </head>
 
   <body>
@@ -23,8 +24,9 @@
           <ul class="navigation-list search-list">
             <li class="navigation-item navigation-item-search">
               <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="navigation-search-label" for="search"><span class="visually-hidden">Поиск:</span></label>
                 <input class="navigation-search-input" id="search" name="search" type="search"
-                  placeholder="Текст поиска">
+                  placeholder="Поиск по сайту">
                 <button class="navigation-search-button">Найти</button>
               </form>
             </li>
@@ -157,7 +159,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="catalog-filter-group">
+            <fieldset class="catalog-filter-group catalog-filter-group-color">
               <legend class="catalog-filter-subtitle">Цвет</legend>
               <ul class="catalog-filter-list">
 
@@ -204,7 +206,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="catalog-filter-group catalog-filter-bt">
+            <fieldset class="catalog-filter-group catalog-filter-group-bt">
               <legend class="catalog-filter-subtitle">Bluetooth</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
@@ -346,6 +348,7 @@
 
         <div class="footer-central-column">
           <section class="footer-services">
+            <h2 class="visually-hidden">Сервисы</h2>
             <ul class="footer-services-list">
               <li class="footer-services-item">
                 <a class="footer-services-link" href="#">Доставка</a>
@@ -359,6 +362,7 @@
             </ul>
           </section>
           <section class="footer-social">
+            <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="footer-social-list">
               <li class="footer-social-item">
                 <a class="footer-social-link telegram" href="https://t.me/htmlacademy">
